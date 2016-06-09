@@ -62,7 +62,7 @@ def EditTrack(request):
     if request.method == 'POST':
 
         editdata = dict(request.POST.items())
-
+        print editdata
         try:
             instance = Track.objects.get(id=editdata['trackid'])
         except DoesNotExist:
@@ -70,7 +70,7 @@ def EditTrack(request):
         else:
             instance.title = editdata['title']
             instance.rating = editdata['rating']
-            instance.genre = editdata['genre']
+            instance.genre__genre_name = editdata['genre']
             instance.save()
         return HttpResponseRedirect(reverse("track-view"))
 
