@@ -10,24 +10,23 @@ Users can :
 	
  
 
-################  Installation ##############
+INSTALLATION
 
 1. Make a Virtual Environment.
 2. Clone the repository with git clone https://github.com/Amanbg/Music-Web-App.git
+3. Go to the directory Music-Web-App/Musictracks/ 
+4. Run sudo apt-get install libmysqlclient-dev python-dev
+5. Run pip install -r requirements/requirements.txt
+6. Run mysql -u root -p
+	i) enter password : root
+	ii) create database musictrack;
+7. Run python manage.py makemigrations
+8. Run python manage.py migrate
+9. Run python manage.py loaddata Musictracks/fixtures/trackdata.json
+10. Run python manage.py runserver
+11. In the Browser's address bar, type "localhost:8000/tracks"
 
-3. Run pip install -r requirements.txt
-4. Go to the directory Music-Web-App/Musictracks/ 
-		a) Run python manage.py makemigrations
-		b) Run python manage.py migrate
-		c) Run mysql -u root -p
-			i) enter password : root
-			ii) create database musictrack;
-		d) Run python manage.py loaddata Musictracks/fixtures/trackdata.json
-		e) Run python manage.py runserver
-		f) In the Browser's address bar, type "localhost:8000/tracks"
-
-
-5. To modify or add data through Django admin , We need to create a SuperUser as:
+12. To modify or add data through Django admin , We need to create a SuperUser as:
 	a) Run python manage.py createsuperuser
 	b) follow instructions
 	c) In the Browser window, type "localhost:8000\admin"
