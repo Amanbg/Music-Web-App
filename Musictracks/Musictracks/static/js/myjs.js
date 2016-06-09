@@ -101,10 +101,7 @@ $(document).on('ready', function(){
            	url: "/track/",
            	data: $("#add-new-form").serialize(), // serializes the form's elements.
            	success: function(data){
-           		console.log("print");
-            	if(alert("Changes saved Successfully!!")){}
-                else
-                   	window.location.reload(); 
+                window.location.reload(); 
             }
           
     	});
