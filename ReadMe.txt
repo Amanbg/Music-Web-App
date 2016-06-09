@@ -15,7 +15,7 @@ Users can :
 1. Make a Virtual Environment.
 2. Clone the repository with git clone https://github.com/Amanbg/Music-Web-App.git
 
-3. Run pip install -r requirements.txt
+3. Run pip install -r requirements/requirements.txt
 4. Go to the directory Music-Web-App/Musictracks/ 
 		a) Run python manage.py makemigrations
 		b) Run python manage.py migrate
