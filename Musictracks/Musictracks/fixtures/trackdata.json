@@ -1,0 +1,111 @@
+[
+{
+    "model": "tracks.genre",
+    "pk": 1,
+    "fields": {
+        "genre_name": "Rock"
+    }
+},
+{
+    "model": "tracks.genre",
+    "pk": 2,
+    "fields": {
+        "genre_name": "Bollywood"
+    }
+},
+{
+    "model": "tracks.genre",
+    "pk": 3,
+    "fields": {
+        "genre_name": "EDM"
+    }
+},
+{
+    "model": "tracks.genre",
+    "pk": 4,
+    "fields": {
+        "genre_name": "Pop"
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 1,
+    "fields": {
+        "title": "Astronomy Domine",
+        "genre": 1,
+        "rating": 4
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 2,
+    "fields": {
+        "title": "Dj Wale Babu",
+        "genre": 2,
+        "rating": 4
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 3,
+    "fields": {
+        "title": "Castle of Glass",
+        "genre": 1,
+        "rating": 5
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 4,
+    "fields": {
+        "title": "Numb",
+        "genre": 1,
+        "rating": 4
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 5,
+    "fields": {
+        "title": "In the End",
+        "genre": 3,
+        "rating": 5
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 6,
+    "fields": {
+        "title": "Not Afraid",
+        "genre": 1,
+        "rating": 5
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 7,
+    "fields": {
+        "title": "The Monster",
+        "genre": 1,
+        "rating": 5
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 8,
+    "fields": {
+        "title": "Love the way you lie",
+        "genre": 1,
+        "rating": 5
+    }
+},
+{
+    "model": "tracks.track",
+    "pk": 10,
+    "fields": {
+        "title": "High by the Beach",
+        "genre": 4,
+        "rating": 4
+    }
+}
+]

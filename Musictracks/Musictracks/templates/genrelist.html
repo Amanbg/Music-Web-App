@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%load staticfiles%}
+{% block content %}
+<div class="title"><h4>Track's Genres</h4></div>
+<table>
+	<div class="genre-list" id="genre-list">
+	{% for genreobj in object_list %}
+		<div class="genreclass" id="genreclass">
+			<a href='{% url 'genredetail-view' genreobj.id %}'>{{genreobj.genre_name}}</a>
+		</div>
+	{% endfor %}
+	</div>
+	
+	<div class="addbutton">
+		<input type=button value="Add New Genre" id="addform-genre" class="addform-genre">
+	</div>
+
+</table>	
+{% endblock %}

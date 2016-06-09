@@ -1,0 +1,20 @@
+{% block add_new %}	
+	<div id="myModal" class="modal">
+	  <!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">×</span>
+			<div class="add-new-form-container">
+				<h4> Edit Track </h4>
+				<form id="add-new-form" class="add-new-form" action="/track/"method="POST">
+				{% csrf_token %}
+						<div class="form-field-name"><input type="hidden" id="trackid" name="trackid" value=''></input></div>
+						<div class="form-field-name">Title:<input type="text" id="title" name="title" value=''></input></div>
+						<div class="form-field-name">Genre:<input type="text" id="genre" name="genre" value=''></input></div>
+						<div class="form-field-name">Rating:<input type="text" id="rating" name="rating" value=''></input></div>
+						<button class="editbtn" type="submit" id="submit_form">Save Changes</button>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock add_new %}

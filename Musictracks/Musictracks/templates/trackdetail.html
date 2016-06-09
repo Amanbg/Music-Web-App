@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{%load staticfiles%}
+
+{% block content %}
+<div class="title">
+<h5>Track Detail</h5>
+</div>
+<table>
+	<div class="trackdetail" id="trackdetail">
+	Title Name </div> 
+	<div class="trackdetailinfo">: {{object.title}}</div>
+	<div class="trackdetail" id="trackdetail">
+	Genre  </div> 
+	<div class="trackdetailinfo">: {{object.genre}}</div>
+	<div class="trackdetail" id="trackdetail">
+	Rating  </div>
+	<div class="trackdetailinfo">: {{object.rating}}</div>
+</table>
+	
+{% endblock %}

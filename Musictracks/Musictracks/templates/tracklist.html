@@ -1,0 +1,100 @@
+
+{% extends "base.html" %}
+{%load staticfiles%}
+
+{% block content %}
+
+<div class="title"><h4>Music Tracks</h4></div>
+
+<form role="search" action="/search/" method="GET"> 
+      
+   <input type="text" id="search_box" class="search" name="search_box" placeholder="Search title"><a href="/search"></a>
+        
+</form>
+
+{%include "edit_track.html"%}
+<table>
+	<tbody>
+
+	{%if not searchdata%}
+		<div class="track-list" id="track-list">
+
+			{% for track in object_list %}
+				
+			<div class="track_genre" id="track_genre">
+				
+				<div class="edit" id="edit" data-trackid="{{ track.id }}" data-tracktitle="{{track.title}}" data-trackgenre="{{track.genre}}" data-trackrating="{{track.rating}}">
+					<a href="#" id="showmodal" class="showmodal"><img src="../static/images/editicon.png"></a>
+				</div><!--div class edit end-->
+				
+				<div class="track" id="track">
+					<a href='{% url 'trackdetail-view' track.id %}'>{{track.title}}</a> 
+				</div>
+				
+				<div class="genre" id="genre">
+					<a href="/genres/">[ {{track.genre}} ]</a>
+				</div>
+				
+				<div class="rating" id="rating">
+					Rating: {{track.rating}}
+				</div>
+			
+			</div>
+
+			{% endfor %}
+		</div>
+	{% else %}
+		<div class="track-list" id="track-list">
+	
+			<div class="track_genre" id="track_genre">
+				
+				<div class="track" id="track">
+					<a href='{% url 'trackdetail-view' searchdata.id %}'>{{searchdata.title}}</a> 
+				</div>
+				
+				<div class="genre" id="genre">
+					[ {{searchdata.genre}} ]
+				</div>
+				<div class="rating" id="rating">
+					Rating: {{searchdata.rating}}
+				</div>
+			</div>
+			
+	{% endif %}
+	    </div>
+	   
+	<div class="addbutton">
+		<input type="button" value="Add New Track" id="addform" class="addform">
+	</div>
+	
+	</tbody>
+</table>
+<div class="container-fluid">
+ 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col_ctr">
+       <nav class="text-center" style="margin-right: 50px; border-right-width: 81px; width: 400px;">
+        <ul class= "pagination">            
+            <li>
+                {% if page.has_previous %}
+                    <a href="?page={{page.previous_page_number}}" aria-label="Previous"> 
+                    <span aria-hidden="true">Prev</span>
+                    </a>
+               {% endif %}
+            </li>
+                {% for p in paginator.page_range %}
+                    <li><a href="?page={{p}}">{{p}}</a></li>
+                {% endfor %}
+            <li>
+                {% if page.has_next %}
+                    <a href="?page={{page.next_page_number}}" aria-label="Next">
+                    <span aria-hidden="true">Next</span>
+                    </a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+</div>
+</div>
+
+{% endblock %}
+
+ 

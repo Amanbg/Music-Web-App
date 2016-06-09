@@ -1,0 +1,414 @@
+
+body {
+	background-color: #ffffff;
+}
+
+.base {
+	margin-left: 406px;
+	width: 633px;
+	height: 480px;
+	background:white;
+	color:black; 
+	border-style: 20px;
+	position: fixed;
+	display: inline-block;
+}
+
+.search {
+	border-radius: 5px;
+	background: url("../images/search.png") no-repeat left;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+	border: thin solid;
+    height: 25px;
+    margin-bottom: 20px;
+    margin-left: 194px;
+    padding-left: 25px;
+    padding-bottom: 1px;
+    width: 250px;
+   
+}
+
+.verticalline {
+	left: -17px;
+    margin-top: 35px;
+    top: 60px;
+	margin-left: 830px;
+	width: 1px;
+	height: 480px;
+	background-color: #48D1CC;
+	position: fixed;
+}
+
+.addtrackform {
+	margin-left:880px;
+	margin-top: 130px;
+	display: inline-block;
+	height: 217px;
+    width: 309px;
+    box-shadow: 10px 10px 5px #888888;
+    background:white;
+    color:black; 
+
+}
+.addtrackform label{
+	width:48px;
+	height:20px;
+}
+.addtrackform input{
+	margin-left:40px;
+	background-size: auto;
+	width:200px;
+}
+.addtrackform select{
+	margin-left:40px;
+	background-size: auto;
+	width:200px;
+}
+.addtrackform button{
+	border-width: 0;
+	background-color: blue;
+	color:white;
+	height: 35px;
+    margin-left: 39px;
+    width: 89px;
+	margin-top: 30px;
+ 
+}
+.addtrackform button:hover{
+	box-shadow: 5px 5px 5px #888888;
+	background-color: blue;
+	color:white;
+	height: 35px;
+    margin-left: 29px;
+    width: 89px;
+	margin-top: 30px;
+ 
+}
+.addgenreform{
+	margin-left: 859px;
+    margin-top: 75px;
+	display: inline-block;
+	height: 217px;
+    width: 309px;
+    box-shadow: 10px 10px 5px #888888;
+    background:white;
+    color:black; 
+}
+.addgenreform label{
+	width:102px;
+	margin-top: 40px;
+	height:20px;
+}
+.addgenreform input{
+	margin-left: -5px;
+    margin-top: 18px;
+	background-size: auto;
+	width:200px;
+}
+.addgenreform select{
+	margin-left:40px;
+	background-size: auto;
+	width:200px;
+}
+.addgenreform button{
+	border-width: 0px;
+	background-color: blue;
+	color:white;
+	height: 34px;
+    margin-left: 51px;
+    width: 64px;
+    margin-top: 30px;
+    display: inline-block;
+}
+.addgenreform button:hover{
+	box-shadow: 5px 5px 5px #888888;
+	background-color: blue;
+	color:white;
+	height: 34px;
+    margin-left: 51px;
+    width: 64px;
+    margin-top: 30px;
+    display: inline-block;
+}
+.edittrack{
+	display:none;
+
+}
+
+.edit{
+	display: inline-block;
+}
+
+.edit img{
+	width:15px;
+	height:15px;
+	border:0;
+}
+
+.editbtn{
+	width:140px;
+	height:40px;
+	background-color: blue;
+	color:white;
+	margin-bottom: 0;
+    margin-left: 231px;
+    margin-top: 14px;
+}
+
+.editbtn:hover{
+	box-shadow: 10px 10px 5px #888888;
+	width:140px;
+	height:40px;
+	background-color: blue;
+	color:white;
+	margin-bottom: 0;
+    margin-left: 231px;
+    margin-top: 14px;
+}
+
+.rating{
+	display: inline-block;
+    width: 82px;
+}
+
+.header {
+	margin-left: 411px;
+	border-bottom-width: 1px;
+	border-bottom-color: blue;
+	width:119px;
+}
+
+.header a:visited,a:link{
+	text-decoration:none;
+}
+.header h3{
+	margin-left: 229px;
+    width: 188px;
+	font-size: 34px;
+	font-family: Palatino;
+	text-shadow: 5px 5px 5px #888888;
+	
+}
+
+.table {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+.title {
+	margin-bottom: 23px;
+    margin-top: 17px;
+	margin-left: 268px;
+	width: 131px;
+}
+
+.title h4{
+	font-size:20px;
+	font-family:Palatino;
+	margin-bottom: 23px;
+    margin-top: 17px;
+	margin-left: -14px;
+	width: 150px;
+}
+.title h5{
+	font-size:20px;
+	font-family:Palatino;
+	margin-bottom: 23px;
+    margin-top: 17px;
+	margin-left: -14px;
+	width: 131px;
+}
+.track{
+	margin-top: 20px;
+	margin-left: 20px;
+    display: inline-block;
+    width: 276px;
+}
+
+.track a{
+	font-size: 15px;
+	font-family: Georgia;
+	text-decoration: none;
+}
+
+.trackdetail{
+	font-size: 15px;
+	font-family: Georgia;
+	margin-left: 147px;
+    width: 94px;
+    display: inline-block;
+}
+
+.trackdetailinfo{
+	font-size: 15px;
+	font-family: Georgia;
+	margin-left: -2px;
+    width: 279px;
+	display: inline-block;
+}
+
+.genredetail{
+	margin-left: 235px;
+    margin-top: 35px;
+    width: 119px;
+	font-size: 16px;
+	font-family: Georgia;
+    display: inline-block;
+}
+.genredetailinfo{
+	font-size: 16px;
+	font-family: Georgia;
+	margin-left: -2px;
+    width: 279px;
+	display: inline-block;
+}
+.track-list{
+	/*border-style:solid;*/
+}
+.genre-list{
+	margin-top: 33px;
+}
+.add-new-form{
+	height: 230px;
+}
+
+.form-field-name{
+	width: 64px;
+	height: 20px;
+	display: inline;
+}
+
+.form-field-name input{
+	margin-left: 30px;
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.genreclass{
+	margin-left: 161px;
+    margin-right: 218px;
+	margin-top: 10px;
+	border-style:solid;
+	border-width:0 0 1px;
+	border-color:#4DBAB7;
+
+}
+
+.genreclass a{
+	font-size: 15px;
+	font-family:Georgia; 
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+.track_genre{
+	margin-right: 74px;
+	border-style: solid;
+	border-width:0 0 1px;
+	border-color: #4DBAB7;
+}
+
+.genre{
+	display: inline-block;
+    width: 150px;
+}
+.genre a{
+	text-decoration: none;
+}
+
+.addbutton {
+	border-width: 0px;
+	margin-left: 247px;
+    margin-right: 18px;
+    margin-top: 61px;
+    width: 120px;
+    
+}
+.addbutton:hover {
+	box-shadow: 10px 10px 5px #888888;
+	margin-left: 247px;
+    margin-right: 18px;
+    margin-top: 61px;
+    width: 120px;
+    
+}
+.addbutton input {
+	 border-width: 0;
+	background:#0066cc ;
+	color:white; 
+	font-size:14px;
+	width:120px;
+	height: 40px;
+}
+.addbutton input:hover {
+	background: blue;
+	color:white;
+	font-size:14px;
+	width:120px;
+	height: 40px;
+
+}
+
+.modal, .alias-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    margin-top: 90px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.modal-content .close, .closed {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.close:hover,
+.close:focus,
+.closed:hover,
+.closed:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 160px;
+}
+
+ul.pagination li {
+
+	display: inline;
+}
+
+ul.pagination li a {
+    color: blue;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}

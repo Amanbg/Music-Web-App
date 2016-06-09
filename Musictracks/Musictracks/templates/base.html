@@ -1,0 +1,51 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script> 
+	<script src="{% static "js/myjs.js" %}"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="{% static "css/base.css" %}" rel= "stylesheet">
+
+	<title>Music Tracks</title>
+</head>
+<body>
+
+{%block header%}
+	<div class="header"><a href="{% url "track-view"%}"><h3>Music App</h3></a></div>
+{%endblock%}
+
+<div class="base">
+	{% block content %}
+	{% endblock %}
+</div>
+
+<div class="addtrackform" id="addtrackform">
+		<form action="/tracks/" id="form" method="post" name="form"> {%csrf_token%}
+			{{form.as_p}}
+			<button type="submit">Add</button>
+			<button type="button" id="hidetrackform">Cancel</button>
+		</form>
+</div>
+<div class="verticalline" id="verticalline"></div>
+<div class="addgenreform" id="addgenreform">
+		<form action="/genres/" id="form" method="post" name="form"> {%csrf_token%}
+				{{form.as_p}}
+			<button type="submit">Add</button>
+			<button type="button" id="hidegenreform">Cancel</button>
+		</form>
+</div>
+</body>
+</html>
+
+
